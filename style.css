@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Text:wght@700&display=swap");
+
+:root {
+  --GrayishBlue: hsl(237, 18%, 59%);
+  --SofRed: hsl(345, 95%, 68%);
+  --White: hsl(0, 0%, 100%);
+  --DarkDesaturatedBlue: hsl(236, 21%, 26%);
+  --VeryDarkBlue: hsl(235, 16%, 14%);
+  --MostlyBlackBlue: hsl(234, 17%, 12%);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Red Hat Text", sans-serif;
+  font-weight: 700;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding-top: 142px;
+  background-color: var(--VeryDarkBlue);
+  background-image: url(./images/pattern-hills.svg), url(./images/bg-stars.svg);
+  background-position: right -170px bottom, right top;
+  background-repeat: no-repeat, no-repeat;
+}
+
+h3 {
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 6.13636px;
+  line-height: 24px;
+  color: var(--White);
+  padding-left: 24px;
+  padding-right: 24px;
+  padding-bottom: 54px;
+}
+.media {
+  width: 136px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+}
+
+svg {
+  cursor: pointer;
+}
+svg path:hover {
+  fill: var(--SofRed);
+}
+.timer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  gap: 13px;
+  margin-bottom: 100px;
+}
+.rect {
+  width: 70px;
+  height: 70px;
+  background-color: var(--DarkDesaturatedBlue);
+  border-radius: 5px;
+}
+.timer p {
+  font-size: 7px;
+  text-align: center;
+  color: #8385a9;
+  padding-top: 13.7px;
+  letter-spacing: 2.95937px;
+}
+.timer span {
+  font-size: 36px;
+  line-height: 71px;
+  letter-spacing: -1.08px;
+  color: #fb5e84;
+  transition: 500;
+}
+
+@media screen and (min-width: 480px) {
+  body {
+    background-position: right bottom, right top;
+  }
+}
